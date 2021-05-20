@@ -1,0 +1,105 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+:root{
+
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #F2F2F2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+body{
+  background-image: url("../img/wall.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  perspective: 2000px;
+}
+.windows {
+ border: 20px outset bisque;
+ width: 300px;
+ height: 500px;
+ background-color: rgba(0, 0, 0, 0.8);
+ transition: transform 1s ease;
+}
+
+.window-all:hover .window-left{
+  display: block;
+  cursor: crosshair;
+  transform-origin: left;
+  transform: rotateY(-130deg);
+  perspective: 180px;
+
+}
+
+.window-all:hover .window-right{
+  display: block;
+  cursor: crosshair;
+  transform-origin: right;
+  transform: rotateY(130deg);
+  perspective: -180px;
+
+}
+.window-left{
+  transform-origin: left;
+}
+
+.window-right{
+  transform-origin: right;
+}
+.window-all{
+  display: flex;
+  background-image: url("../img/masha3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 30px solid rgb(107, 92, 59);
+
+}
+
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
